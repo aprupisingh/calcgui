@@ -1,21 +1,61 @@
-# -*- coding: utf-8 -*-
+"""
+
+        Simple Calculator using Tkinter
+
+
+Project : Calculator GUI
+Language: Python 2.7
+Library : Tkinter
+
+Description:
+
+This is a simple calculator application built using the
+Tkinter library in Python 2.7. It allows users to perform
+basic arithmetic operations through a graphical interface.
+
+Features:
+
+ Addition (+)
+ Subtraction (-)
+ Multiplication (*)
+ Division (/)
+ Percentage (%)
+ Decimal Numbers
+ Delete Last Character
+Clear Screen
+ Error Handling
+
+Author : Aprupinath Singh
+Date   : 2026
+
+"""
 
 from Tkinter import *
 
-# ---------------- Functions ---------------- #
+# Function to insert button values
+# into the calculator display
 
 def click(value):
     current = entry.get()
     entry.delete(0, END)
     entry.insert(END, current + str(value))
 
+
+# Clear the display
+
 def clear():
     entry.delete(0, END)
+
+
+# Delete the last entered character
 
 def backspace():
     current = entry.get()
     entry.delete(0, END)
     entry.insert(0, current[:-1])
+
+
+# Evaluate the mathematical expression
 
 def calculate():
     try:
@@ -26,14 +66,15 @@ def calculate():
         entry.delete(0, END)
         entry.insert(0, "Error")
 
-# ---------------- Window ---------------- #
 
+# Create Main Window
 root = Tk()
 root.title("Calculator")
 root.geometry("350x500")
 root.resizable(False, False)
 
-# ---------------- Display ---------------- #
+
+# Calculator Display
 
 entry = Entry(root,
               font=("Arial", 20),
@@ -42,11 +83,13 @@ entry = Entry(root,
 
 entry.pack(fill=X, padx=10, pady=10, ipady=10)
 
-# ---------------- Buttons ---------------- #
+
+# Frame for Calculator Buttons
 
 frame = Frame(root)
 frame.pack(expand=True, fill=BOTH)
 
+# Button Layout
 buttons = [
     ['C', 'DEL', '%', '/'],
     ['7', '8', '9', '*'],
@@ -54,6 +97,9 @@ buttons = [
     ['1', '2', '3', '+'],
     ['0', '.', '=']
 ]
+
+
+# Create Buttons Dynamically
 
 for row in buttons:
 
@@ -79,5 +125,8 @@ for row in buttons:
                    height=2)
 
         b.pack(side=LEFT, expand=True, fill=BOTH, padx=2, pady=2)
+
+
+# Start the Application
 
 root.mainloop()
