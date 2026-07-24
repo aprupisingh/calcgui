@@ -1,9 +1,9 @@
-# calcgui
+# Project : Calculator GUI
  Simple Calculator using Tkinter
 
 
-Project : Calculator GUI
-Language: Python 2.7
+
+## Language: Python 2.7
 Library : Tkinter
 
 Description:
@@ -14,15 +14,15 @@ basic arithmetic operations through a graphical interface.
 
 Features:
 
- Addition (+)
- Subtraction (-)
- Multiplication (*)
- Division (/)
- Percentage (%)
- Decimal Numbers
- Delete Last Character
-Clear Screen
- Error Handling
+ Addition (+),
+ Subtraction (-),
+ Multiplication (*),
+ Division (/),
+ Percentage (%),
+ Decimal Numbers,
+ Delete Last Character,
+Clear Screen,
+ Error Handling,
 
 Author : Aprupinath Singh
 Date   : 2026
